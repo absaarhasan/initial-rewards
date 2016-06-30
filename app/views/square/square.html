@@ -1,0 +1,25 @@
+
+<header class="container">
+    <h1>Square</h1>
+</header>
+
+<div class="main  container">
+
+    <div class="controls">
+
+
+        <form name="updateShape" novalidate>
+            <label for="square">Please select a width:</label>
+            <input name="input" placeholder="100" type="number" id="square" ng-model="squareInput" ng-pattern="/^\d+$/"/><span>px</span>
+        </form>
+    </div>
+    <p class="errors" ng-show="updateShape.input.$touched && updateShape.input.$invalid">Numbers only!</p>
+    <div class="canvasArea">
+
+        <span class="square"
+              style="width:{{squareInput}}px;
+              height:{{squareInput}}px">&nbsp;</span>
+
+    </div>
+
+</div>

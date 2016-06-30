@@ -1,0 +1,7 @@
+<nav class="container">
+    <ul>
+        <li  ng-class="{ selected : $state.includes('square') }" ui-sref="square"><span class="square">Square</span></li>
+        <li ng-class="{ selected : $state.includes('circle') }" ui-sref="circle"><span class="circle">Circle</span></li>
+        <li ng-class="{ selected : $state.includes('triangle') }" ui-sref="triangle"><span class="triangle">Triangle</span></li>
+    </ul>
+</nav>

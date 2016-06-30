@@ -1,0 +1,30 @@
+
+<header class="container">
+    <h1>Circle</h1>
+</header>
+
+<div class="main  container">
+
+    <div class="controls">
+
+
+        <form name="updateShape" novalidate>
+            <label for="square">Please select a radius:</label>
+            <input name="input" placeholder="100" type="number" id="square" ng-model="circleInput" ng-pattern="/^\d+$/"/><span>px</span>
+        </form>
+    </div>
+    <p class="errors" ng-show="updateShape.input.$touched && updateShape.input.$invalid">Numbers only!</p>
+    <div class="canvasArea">
+
+        <span class="circle"
+                style="width:{{circleInput}}px;
+                height:{{circleInput}}px;
+                -webkit-border-radius: {{circleInput /2}};
+                -moz-border-radius: {{circleInput /2}};
+                border-radius: {{circleInput /2}}px;
+
+              ">&nbsp;</span>
+
+    </div>
+
+</div>
